@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Bloque 0 · Plataformas, economía y transformación digital</title>
+<style>
+:root{
+  --fondo:#f4f5f7;
+  --blanco:#ffffff;
+  --texto:#1f2a37;
+  --texto-suave:#5b6676;
+  --borde:#d9dee5;
+
+  --acento:#14a3dc;
+  --acento-oscuro:#0f7ea9;
+
+  --u1:#00a651;
+  --u2:#5b4bc4;
+  --u3:#f28c1b;
+
+  --sombra:0 8px 24px rgba(15, 35, 55, 0.08);
+  --radio:18px;
+}
+
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  font-family:"Aptos","Segoe UI",Arial,sans-serif;
+  background:var(--fondo);
+  color:var(--texto);
+}
+
+.b0-wrap{
+  width:min(1320px, calc(100% - 32px));
+  margin:20px auto;
+  background:var(--blanco);
+  border-radius:24px;
+  overflow:hidden;
+  box-shadow:var(--sombra);
+}
+
+.hero{
+  position:relative;
+  min-height:440px;
+  display:flex;
+  align-items:flex-end;
+  padding:34px;
+  background:
+    linear-gradient(rgba(18,34,48,.42), rgba(18,34,48,.58)),
+    url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+}
+
+.hero-panel{
+  max-width:760px;
+  background:rgba(20,163,220,.95);
+  color:#fff;
+  padding:22px 24px;
+  box-shadow:0 10px 30px rgba(0,0,0,.18);
+}
+
+.hero-kicker{
+  margin:0 0 10px;
+  font-size:14px;
+  font-weight:500;
+  letter-spacing:.4px;
+  text-transform:uppercase;
+  opacity:.95;
+}
+
+.hero h1{
+  margin:0;
+  font-size:clamp(32px, 4.8vw, 58px);
+  line-height:1.02;
+  letter-spacing:-1px;
+  font-weight:800;
+}
+
+.hero-sub{
+  margin-top:16px;
+  max-width:880px;
+  color:#ffffff;
+  font-size:18px;
+  line-height:1.5;
+  text-shadow:0 1px 4px rgba(0,0,0,.25);
+}
+
+.hero-meta{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:18px;
+}
+
+.hero-meta span{
+  display:inline-block;
+  padding:10px 16px;
+  background:rgba(255,255,255,.82);
+  border:1px solid rgba(255,255,255,.95);
+  color:#173042;
+  font-size:13px;
+  font-weight:700;
+  border-radius:999px;
+  backdrop-filter:blur(6px);
+  -webkit-backdrop-filter:blur(6px);
+  box-shadow:0 2px 8px rgba(0,0,0,.10);
+}
+
+.layout{
+  display:grid;
+  grid-template-columns:300px 1fr;
+  gap:22px;
+  padding:24px;
+}
+
+.menu{
+  background:#eef2f5;
+  border-radius:20px;
+  padding:18px;
+  align-self:start;
+  position:sticky;
+  top:16px;
+}
+
+.menu h3{
+  margin:0 0 14px;
+  font-size:14px;
+  text-transform:uppercase;
+  letter-spacing:.5px;
+  color:#3b4b5c;
+}
+
+.menu ul{
+  list-style:none;
+  padding:0;
+  margin:0;
+}
+
+.menu li{
+  margin-bottom:10px;
+  padding:12px 14px;
+  border-radius:14px;
+  background:#fff;
+  border:1px solid #e3e8ee;
+  color:#314254;
+  font-size:14px;
+  line-height:1.35;
+  cursor:pointer;
+  transition:all .2s ease;
+}
+
+.menu li:hover{
+  transform:translateX(2px);
+  border-color:#c8dcea;
+}
+
+.menu li.active{
+  background:var(--acento);
+  color:#fff;
+  border-color:var(--acento);
+}
+
+.content{
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+}
+
+.section{
+  display:block;
+  scroll-margin-top:20px;
+}
+
+.card{
+  background:#fff;
+  border:1px solid var(--borde);
+  border-radius:20px;
+  padding:26px;
+}
+
+.card h2{
+  margin:0 0 16px;
+  font-size:30px;
+  line-height:1.1;
+  letter-spacing:-.5px;
+  color:#0f2535;
+}
+
+.card p{
+  margin:0 0 14px;
+  font-size:16px;
+  line-height:1.7;
+  color:var(--texto-suave);
+}
+
+.card p strong{
+  color:var(--texto);
+}
+
+.card ul{
+  margin:0;
+  padding-left:20px;
+}
+
+.card li{
+  margin-bottom:10px;
+  font-size:16px;
+  line-height:1.65;
+  color:var(--texto-suave);
+}
+
+.destacado{
+  margin-top:16px;
+  padding:18px 20px;
+  border-left:6px solid var(--acento);
+  background:#f0f8fc;
+  border-radius:14px;
+  font-size:15px;
+  line-height:1.65;
+  color:#375064;
+}
+
+.grid-3{
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:16px;
+}
+
+.unidad{
+  border-radius:18px;
+  overflow:hidden;
+  border:1px solid var(--borde);
+  background:#fff;
+}
+
+.unidad-head{
+  padding:14px 16px;
+  color:#fff;
+  font-size:18px;
+  font-weight:700;
+  line-height:1.25;
+}
+
+.unidad.u1 .unidad-head{ background:var(--u1); }
+.unidad.u2 .unidad-head{ background:var(--u2); }
+.unidad.u3 .unidad-head{ background:var(--u3); }
+
+.unidad-body{
+  padding:16px;
+}
+
+.unidad-body p{
+  font-size:15px;
+  margin-bottom:10px;
+}
+
+.badges{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-top:8px;
+}
+
+.badges span{
+  padding:6px 10px;
+  border-radius:999px;
+  font-size:12px;
+  font-weight:700;
+  background:#eef2f5;
+  color:#415264;
+}
+
+.kpis{
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:12px;
+  margin-top:16px;
+}
+
+.kpi{
+  border:1px solid var(--borde);
+  border-radius:16px;
+  padding:16px;
+  background:#f8fafc;
+}
+
+.kpi .et{
+  font-size:12px;
+  text-transform:uppercase;
+  letter-spacing:.4px;
+  color:#6b7a8c;
+  margin-bottom:8px;
+}
+
+.kpi .va{
+  font-size:20px;
+  font-weight:800;
+  color:#132a3c;
+}
+
+.docentes{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:16px;
+}
+
+.docente{
+  border:1px solid var(--borde);
+  border-radius:18px;
+  padding:18px;
+  background:#fafbfc;
+}
+
+.docente h3{
+  margin:0 0 10px;
+  font-size:20px;
+  color:#132a3c;
+}
+
+.tabla-wrap{
+  overflow:auto;
+  border-radius:16px;
+  border:1px solid var(--borde);
+}
+
+table{
+  width:100%;
+  border-collapse:collapse;
+  background:#fff;
+}
+
+th{
+  text-align:left;
+  background:#eaf6fb;
+  color:#18415a;
+  padding:14px;
+  font-size:13px;
+  text-transform:uppercase;
+  letter-spacing:.4px;
+}
+
+td{
+  padding:14px;
+  border-top:1px solid var(--borde);
+  vertical-align:top;
+  font-size:15px;
+  line-height:1.5;
+  color:var(--texto-suave);
+}
+
+.pill{
+  display:inline-block;
+  padding:6px 10px;
+  border-radius:999px;
+  font-size:12px;
+  font-weight:700;
+  color:#fff;
+}
+
+.pill.u1{ background:var(--u1); }
+.pill.u2{ background:var(--u2); }
+.pill.u3{ background:var(--u3); }
+
+.sync-tag{
+  display:inline-block;
+  margin-top:8px;
+  padding:6px 10px;
+  border-radius:999px;
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:.2px;
+  background:#dff4fb;
+  color:#0f7ea9;
+  border:1px solid #b9e4f3;
+}
+
+
+.sync-link{
+  display:inline-block;
+  margin-top:8px;
+  margin-left:8px;
+  padding:6px 10px;
+  border-radius:999px;
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:.2px;
+  text-decoration:none;
+  background:#ffffff;
+  color:#0f7ea9;
+  border:1px solid #b9e4f3;
+  transition:all .2s ease;
+}
+
+.sync-link:hover{
+  background:#f0f8fc;
+  border-color:#8fd2e7;
+  transform:translateY(-1px);
+}
+
+.entrega-tag{
+  display:inline-block;
+  margin-top:8px;
+  padding:6px 10px;
+  border-radius:999px;
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:.2px;
+  background:#fff4df;
+  color:#a86400;
+  border:1px solid #f2d39b;
+}
+
+
+.biblio-ref{
+  margin-bottom:8px;
+  color:var(--texto);
+  font-weight:600;
+}
+
+.biblio-btn{
+  display:inline-block;
+  margin-top:6px;
+  padding:8px 14px;
+  border-radius:999px;
+  font-size:13px;
+  font-weight:700;
+  text-decoration:none;
+  background:var(--acento);
+  color:#fff;
+  border:1px solid var(--acento);
+  transition:all .2s ease;
+}
+
+.biblio-btn:hover{
+  background:var(--acento-oscuro);
+  border-color:var(--acento-oscuro);
+  transform:translateY(-1px);
+}
+
+.biblio-empty{
+  color:#7a8795;
+  font-style:italic;
+}
+
+@media (max-width:1080px){
+  .layout{
+    grid-template-columns:1fr;
+  }
+
+  .menu{
+    position:relative;
+    top:0;
+  }
+
+  .grid-3,
+  .kpis,
+  .docentes{
+    grid-template-columns:1fr;
+  }
+}
+
+@media (max-width:720px){
+  .b0-wrap{
+    width:100%;
+    margin:0;
+    border-radius:0;
+  }
+
+  .hero{
+    min-height:360px;
+    padding:18px;
+  }
+
+  .hero-panel{
+    padding:18px;
+  }
+
+  .layout{
+    padding:16px;
+  }
+
+  .card{
+    padding:18px;
+  }
+
+  .card h2{
+    font-size:24px;
+  }
+}
+
+/* Adaptación integral a pantallas reducidas y a páginas incrustadas */
+html{scroll-behavior:smooth}
+body{overflow-x:hidden}
+.b0-wrap,.b0-wrap *{min-width:0}
+.b0-wrap img,.b0-wrap iframe,.b0-wrap video{max-width:100%;height:auto}
+.b0-wrap a{overflow-wrap:anywhere}
+.menu a{display:block;margin-bottom:10px;padding:12px 14px;border-radius:14px;background:white;border:1px solid #e3e8ee;color:#314254;text-decoration:none;font-weight:600}
+.menu a:hover,.menu a:focus-visible{background:#dff4fd;outline:2px solid #14a3dc}
+.clase-card{border:1px solid #d9dee5;border-radius:16px;padding:18px;margin:16px 0;background:#fbfcfd;scroll-margin-top:20px}
+.clase-meta{font-weight:800;color:#0f7ea9;font-size:13px;letter-spacing:.025em;margin-bottom:10px}
+.clase-card h3{font-size:clamp(18px,2.5vw,23px);line-height:1.3;margin:0 0 12px;color:#162d3e}
+.clase-card p{margin-bottom:12px}
+.clase-card ul{padding-left:20px;margin-top:10px}
+.clase-card li{overflow-wrap:anywhere}
+.clase-actividad{color:#0c6b8d!important;font-weight:700}
+@media (max-width:1080px){.layout{grid-template-columns:minmax(0,1fr)}.menu{position:static}.menu ul{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px}}
+@media (max-width:600px){
+ .b0-wrap{width:100%;margin:0;border-radius:0;box-shadow:none}
+ .hero{min-height:0;padding:24px 16px;background-position:center}
+ .hero-panel{padding:18px}
+ .hero h1{font-size:clamp(27px,8vw,38px);letter-spacing:-.4px;line-height:1.13}
+ .hero-sub{font-size:15px}
+ .hero-meta span{font-size:12px;padding:7px 10px}
+ .layout{padding:12px;gap:12px}
+ .menu{padding:12px;border-radius:14px}
+ .menu ul{grid-template-columns:1fr 1fr}
+ .menu a{font-size:12px;padding:10px;min-height:42px}
+ .card{padding:16px;border-radius:14px}
+ .card h2{font-size:clamp(22px,6vw,28px)}
+ .grid-3,.kpis,.docentes{grid-template-columns:minmax(0,1fr)}
+ .clase-card{padding:14px}
+ .tabla-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+}
+@media (max-width:380px){.menu ul{grid-template-columns:1fr}}
+
+.back-index{margin:14px 24px 0;font-weight:700}.back-index a{color:#0f7ea9;text-decoration:none}
+
+/* Navegación por pestañas: sólo una sección visible */
+.b0-wrap .section{display:none}
+.b0-wrap .section.active{display:block}
+.b0-wrap .menu a.active{background:var(--acento);color:#fff;border-color:var(--acento)}
+.b0-wrap .menu a:focus-visible{outline:3px solid #0f7ea9;outline-offset:2px}
+.b0-wrap .content{min-width:0}
+.b0-wrap .tabla-wrap{max-width:100%;overflow-x:auto}
+/* Cronograma compacto: cada clase se despliega cuando se necesita */
+.b0-wrap .clases-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:18px}
+.b0-wrap details.clase-card{margin:0;padding:0;overflow:hidden;background:#fff}
+.b0-wrap details.clase-card summary{display:block;list-style:none;padding:16px 18px;cursor:pointer;position:relative;padding-right:42px}
+.b0-wrap details.clase-card summary::-webkit-details-marker{display:none}
+.b0-wrap details.clase-card summary::after{content:'+';position:absolute;right:18px;top:18px;font-size:23px;font-weight:700;color:var(--acento-oscuro)}
+.b0-wrap details.clase-card[open] summary::after{content:'−'}
+.b0-wrap details.clase-card[open]{grid-column:1/-1;border-color:#8ecce5}
+.b0-wrap details.clase-card[open] summary{background:#edf8fc;border-bottom:1px solid var(--borde)}
+.b0-wrap details.clase-card .clase-detalle{padding:18px}
+.b0-wrap details.clase-card summary h3{margin:6px 0 0;font-size:18px;line-height:1.35}
+.b0-wrap details.clase-card summary .clase-meta{margin-bottom:4px}
+@media(max-width:760px){.b0-wrap .clases-grid{grid-template-columns:1fr}.b0-wrap details.clase-card[open]{grid-column:auto}}
+@media(max-width:600px){.b0-wrap .menu ul{grid-template-columns:repeat(2,minmax(0,1fr))}.b0-wrap details.clase-card summary{padding:14px 40px 14px 14px}}
+</style>
+</head>
+<body>
+<div class="b0-wrap">
+<p class="back-index"><a href="index.html">← Ir al índice de clases</a></p><header class="hero">
+<div>
+<div class="hero-panel">
+<p class="hero-kicker">Bloque 0 · Materia de posgrado</p>
+<h1>Plataformas, economía y transformación digital</h1>
+</div>
+<p class="hero-sub">
+        Un espacio para comprender cómo las plataformas, los datos y las tecnologías
+        disruptivas reconfiguran negocios, finanzas, trabajo, organizaciones y políticas
+        públicas en la economía digital.
+      </p>
+<div class="hero-meta">
+<span>Diploma de Posgrado en Negocios Digitales</span>
+<span>Modalidad a distancia</span>
+<span>32 horas</span>
+<span>Noviembre–diciembre 2026</span>
+</div>
+</div>
+</header>
+<div class="layout">
+<aside class="menu">
+<h3>Bloque de inicio</h3>
+<ul>
+<li><a href="#presentacion">Presentación</a></li>
+<li><a href="#objetivos">Objetivos</a></li>
+<li><a href="#contenidos">Contenidos</a></li>
+<li><a href="#modalidad">Modalidad de trabajo</a></li>
+<li><a href="#evaluacion">Evaluación</a></li>
+<li><a href="#docentes">Equipo docente</a></li>
+<li><a href="#cronograma">Cronograma</a></li>
+</ul>
+</aside>
+<main class="content">
+<section class="card section" id="presentacion">
+<h2>Presentación de la materia</h2>
+<p>
+<strong>Plataformas, economía y transformación digital</strong> propone analizar
+          el nuevo paradigma de la economía digital y sus efectos sobre los modelos de negocio,
+          los circuitos productivos, comerciales y financieros, así como sobre la gestión de
+          organizaciones en contextos de innovación acelerada.
+        </p>
+<p>
+          A lo largo de la cursada se abordarán la expansión de las plataformas digitales,
+          la centralidad de los datos, la geopolítica tecnológica y el papel de tecnologías
+          habilitadoras como la inteligencia artificial, Internet de las cosas, Industria 4.0,
+          blockchain y FinTech.
+        </p>
+<p>
+          La propuesta combina una mirada conceptual, crítica y aplicada, orientada a comprender
+          transformaciones contemporáneas y a proyectar estrategias de intervención en entornos
+          de negocios digitales.
+        </p>
+<div class="kpis">
+<div class="kpi">
+<div class="et">Unidad I</div>
+<div class="va">Economía digital</div>
+</div>
+<div class="kpi">
+<div class="et">Unidad II</div>
+<div class="va">Geopolítica, datos y finanzas digitales</div>
+</div>
+<div class="kpi">
+<div class="et">Unidad III</div>
+<div class="va">Tecnologías habilitadoras de la transformación digital</div>
+</div>
+</div>
+</section>
+<section class="card section" id="objetivos">
+<h2>Objetivos de aprendizaje</h2>
+<ul>
+<li>Analizar los elementos conceptuales y prácticos para gestionar los negocios digitales dentro del marco de la emergente economía digital y los procesos de transformación digital de las organizaciones.</li>
+</ul>
+<div class="destacado">
+          La materia busca articular teoría, lectura crítica del presente y análisis estratégico, para pensar decisiones organizacionales en un escenario atravesado por plataformas, automatización y nuevas formas de producción de valor.
+        </div>
+</section>
+<section class="card section" id="contenidos">
+<h2>Recorrido temático</h2>
+<div class="grid-3">
+<article class="unidad u1">
+<div class="unidad-head">Unidad I · Economía digital</div>
+<div class="unidad-body">
+<p>
+                Economía digital: origen, conceptos, dimensiones y debates. La digitalización como nuevo paradigma. Valor, datos y la lógica de la escasez digital. Economía digital y circuitos productivos y comerciales. El rol de la información y el conocimiento. Economía y cooperativismo de plataformas. El fenómeno de las plataformas digitales. Modelos de negocio de plataformas (transaccionales, de innovación, de nube). Debate sobre el valor, el trabajo y la regulación de plataformas.
+              </p>
+<div class="badges">
+<span>Plataformas</span>
+<span>Datos</span>
+<span>Valor</span>
+<span>Modelos de negocio</span>
+</div>
+</div>
+</article>
+<article class="unidad u2">
+<div class="unidad-head">Unidad II · Geopolítica, datos y finanzas</div>
+<div class="unidad-body">
+<p>
+                Geopolítica en la era digital. La concentración del valor y el poder de las empresas tecnológicas y su impacto en las economías periféricas. Estado, brecha digital y políticas de desarrollo. Gobiernos inteligentes e iniciativas públicas digitales. Finanzas, dinero electrónico y criptomonedas. De la banca digital a las FinTech. Introducción a la tecnología blockchain y su impacto en los negocios.
+              </p>
+<div class="badges">
+<span>Geopolítica</span>
+<span>FinTech</span>
+<span>Blockchain</span>
+<span>Gobierno digital</span>
+</div>
+</div>
+</article>
+<article class="unidad u3">
+<div class="unidad-head">Unidad III · Tecnologías habilitadoras</div>
+<div class="unidad-body">
+<p>
+                Transformación digital. Internet de las cosas (IoT). La interconexión de objetos y su aplicación en la generación de datos para la toma de decisiones. Industrias 4.0. Concepto, pilares tecnológicos y su impacto en la cadena de valor (logística, manufactura, servicios). Inteligencia artificial (IA). Tipos de IA (Machine Learning, Deep Learning). Aplicaciones de IA en negocios (personalización, análisis predictivo, automatización de procesos).
+              </p>
+<div class="badges">
+<span>IA</span>
+<span>IoT</span>
+<span>Industria 4.0</span>
+<span>Automatización</span>
+</div>
+</div>
+</article>
+</div>
+</section>
+<section class="card section" id="modalidad">
+<h2>Modalidad de trabajo</h2>
+<ul>
+<li>La cursada se desarrolla en modalidad a distancia.</li>
+<li>Se combinarán instancias asincrónicas con encuentros sincrónicos en momentos clave.</li>
+<li>Habrá lecturas obligatorias, foros, actividades de análisis y tareas en el aula virtual.</li>
+<li>Se trabajará sobre casos y problemas vinculados con negocios digitales y transformación organizacional.</li>
+<li>El recorrido converge en la elaboración de un trabajo final con incorporación de al menos una tecnología habilitadora.</li>
+</ul>
+<div class="destacado">
+          La propuesta didáctica prioriza una dinámica de estudio y producción: leer, discutir, interpretar, comparar y diseñar respuestas para contextos atravesados por plataformas, datos y tecnologías emergentes.
+        </div>
+</section>
+<section class="card section" id="evaluacion">
+<h2>Evaluación y aprobación</h2>
+<p>
+          La evaluación combina seguimiento del proceso de cursada con una instancia final integradora.
+        </p>
+<ul>
+<li><strong>Evaluación parcial (40%)</strong>: resolución de actividades sobre la discusión de lecturas dirigidas, material audiovisual (documentales, películas) y participación en foros de discusión temática.</li>
+<li><strong>Evaluación final (60%)</strong>: realización de un trabajo final escrito e integrador.</li>
+</ul>
+<p>Para aprobar la materia se requiere:</p>
+<ul>
+<li>75% de asistencia;</li>
+<li>aprobación de las instancias evaluativas con un mínimo del 70%;</li>
+<li>presentación del trabajo final en tiempo y forma.</li>
+</ul>
+</section>
+<section class="card section" id="docentes">
+<h2>Equipo docente</h2>
+<div class="docentes">
+<div class="docente">
+<h3>Sergio Paz</h3>
+<p>
+              Doctor en Ciencia Política de la Universidad del Salvador. Posdoctorado del Centro de Estudios Avanzados de la Universidad Nacional de Córdoba (UNC). Docente-investigador, con cargo de Profesor Asociado Ordinario, de la Universidad Nacional de Quilmes (UNQ). A nivel de posgrado dicta cursos en el Doctorado en Administración y Políticas Públicas de la UNC y el Doctorado en Estudios Territoriales de la UNQ, además es docente en la Maestría en Ciencias Sociales y Humanidades, la Maestría en Comercio y Negocios Internacionales y la Maestría en Desarrollo y Gestión del Turismo de la UNQ. Director del Proyecto de I+D: Economía del Conocimiento, Transformación Digital e Inteligencia Artificial (UNQ).
+            </p>
+</div>
+<div class="docente">
+<h3>Linda Angélica Lopez</h3>
+<p>
+              Doctoranda de la Universidad Nacional de Quilmes en Transformación Digital, Comunicación y Educación (UNQ). Máster en IA y Educación (Tech Global University - Andorra). Maestranda en Educación (UNQ). Lic. y Prof. en Educación (UNQ), docente de la asignatura Administración de las Instituciones Escolares en la UNQ. Prof. de Artes en Música (EMBA). Esp. Docente de Nivel Superior en Educación (UNQ) y DD. HH. Esp. Docente de Nivel Superior en Políticas y Programas Socioeducativos (Programa Nuestra Escuela). Esp. en Docencia en Entornos Virtuales (UNQ). Diplomada en IA y Sociedad (UNTREF). Investigadora.
+            </p>
+</div>
+</div>
+<div class="destacado">
+          La propuesta pedagógica de la asignatura se sostiene en una articulación entre marcos teóricos, análisis de casos y producción aplicada, con el acompañamiento del equipo docente en las distintas instancias de trabajo y evaluación.
+        </div>
+</section>
+<section class="card section" id="cronograma"><h2>Cronograma de clases · noviembre–diciembre de 2026</h2><p>Cinco encuentros sincrónicos los jueves a las 19:00 h, acompañados por actividades asincrónicas. A continuación se presenta el recorrido, la bibliografía y las fechas de entrega.</p><div class="clases-grid"><details class="clase-card" id="clase-1"><summary><div class="clase-meta">CLASE 1 · 05/11/2026 · 19:00 h · Unidad I</div><h3>Economía digital, transformación digital e IA como paradigma</h3></summary><div class="clase-detalle"><p>Economía digital, transformación digital e IA como paradigma. Economía y plataformas. Capitalismo de plataformas. Negocios en la era digital.</p><p class="clase-actividad">Encuentro sincrónico y clase asincrónica</p><strong>Bibliografía</strong><ul><li><a href="https://ridaa.unq.edu.ar/bitstream/handle/20.500.11807/2990/economia_digital.pdf?sequence=1&amp;isAllowed=y" rel="noopener noreferrer" target="_blank">Paz, S. (2021). Economía digital: El futuro ya llegó (Introducción).</a></li><li><a href="https://www.studocu.com/latam/document/universidad-de-la-republica/teoria/srnicek-capitalismo-de-plataformas/89990389" rel="noopener noreferrer" target="_blank">Srnicek, N. (2018). Capitalismo de plataformas (cap. 2).</a></li></ul></div></details><details class="clase-card" id="clase-2"><summary><div class="clase-meta">CLASE 2 · 12/11/2026 · 19:00 h · Unidad I</div><h3>Debates sobre economía digital, transformación digital, IA y trabajo</h3></summary><div class="clase-detalle"><p>Debates sobre economía digital, transformación digital, IA y trabajo. Información y conocimiento en la era digital.</p><p class="clase-actividad">Encuentro sincrónico y clase asincrónica</p><strong>Bibliografía</strong><ul><li><a href="https://unctad.org/system/files/official-document/der2024_overview_es.pdf" rel="noopener noreferrer" target="_blank">UNCTAD (2024). Informe sobre la Economía Digital 2024.</a></li><li><a href="https://ridaa.unq.edu.ar/bitstream/handle/20.500.11807/2990/economia_digital.pdf?sequence=1&amp;isAllowed=y" rel="noopener noreferrer" target="_blank">Paz, S. (2021). Economía digital: El futuro ya llegó (La era de los datos).</a></li></ul></div></details><details class="clase-card" id="clase-3"><summary><div class="clase-meta">CLASE 3 · 26/11/2026 · 19:00 h · Unidad II</div><h3>Geopolítica y datos</h3></summary><div class="clase-detalle"><p>Geopolítica y datos. Poder, tablero internacional y economías periféricas.</p><p class="clase-actividad">Encuentro sincrónico y clase asincrónica</p><strong>Bibliografía</strong><ul><li><a href="https://publications.iadb.org/es/publications/spanish/viewer/Econom%C3%ADa-digital-en-Am%C3%A9rica-Latina-y-el-Caribe-Situaci%C3%B3n-actual-y-recomendaciones.pdf" rel="noopener noreferrer" target="_blank">García Zaballos e Iglesias (2017). Economía digital en América Latina y el Caribe (pp. 1–7).</a></li><li><a href="https://unctad.org/system/files/official-document/der2021_es_0.pdf" rel="noopener noreferrer" target="_blank">UNCTAD (2021). Informe sobre la economía digital: flujos de datos transfronterizos (pp. 1–38).</a></li></ul></div></details><details class="clase-card" id="clase-4"><summary><div class="clase-meta">CLASE 4 · 03/12/2026 · 19:00 h · Unidad II</div><h3>Gobiernos inteligentes e iniciativas públicas digitales</h3></summary><div class="clase-detalle"><p>Gobiernos inteligentes e iniciativas públicas digitales. Finanzas digitales: dinero electrónico, criptomonedas y FinTech.</p><p class="clase-actividad">Encuentro sincrónico y clase asincrónica</p><strong>Bibliografía</strong><ul><li><a href="https://publications.iadb.org/es/publications/spanish/viewer/Guia-de-transformacion-digital-del-gobierno.pdf" rel="noopener noreferrer" target="_blank">BID (2022). Guía de transformación digital del gobierno (pp. 7–18).</a></li><li><a href="https://ridaa.unq.edu.ar/bitstream/handle/20.500.11807/2990/economia_digital.pdf?sequence=1&amp;isAllowed=y" rel="noopener noreferrer" target="_blank">Paz, S. (2021). Economía digital: El futuro ya llegó (selecciones sobre finanzas digitales).</a></li></ul></div></details><details class="clase-card" id="clase-5"><summary><div class="clase-meta">CLASE 5 · 10/12/2026 · 19:00 h · Unidad III</div><h3>Tecnologías habilitadoras: transformación digital e Internet de las cosas (IoT)</h3></summary><div class="clase-detalle"><p>Tecnologías habilitadoras: transformación digital e Internet de las cosas (IoT). Industria 4.0 e impacto en la cadena de valor. Taller sincrónico de aplicaciones de IA.</p><p class="clase-actividad">Encuentro sincrónico y clase asincrónica · Taller sincrónico de aplicaciones de IA</p><strong>Bibliografía</strong><ul><li><a href="https://deya.unq.edu.ar/2025/07/transformacion-digital-presente-y-futuro/" rel="noopener noreferrer" target="_blank">Paz, S. y Ferrera, A. (2025). Transformación digital: presente y futuro.</a></li><li><a href="https://www.digitales.es/wp-content/uploads/2020/05/INDUSTRIA-4.0-web-1.pdf" rel="noopener noreferrer" target="_blank">DigitalES (2020). Industria 4.0.</a></li><li><a href="https://www.oracle.com/a/ocom/docs/dc/fy19084-erp-nuevas_tecnolog%C3%ADas_llevan.pdf?elqTrackId=6492f9b8f3df42a3ac731250e369adf7&amp;elqaid=80665&amp;elqat=2" rel="noopener noreferrer" target="_blank">Oracle (2020). IoT, IA y blockchain.</a></li></ul></div></details></div><div class="destacado">Fechas importantes: 26/11, entrega del esquema del Trabajo Final Integrador (TFI). 17/12, entrega del TFI.</div></section>
+</main>
+</div>
+</div>
+<script>
+(function(){
+ const root=document.querySelector('.b0-wrap');
+ const links=Array.from(root.querySelectorAll('.menu a[href^="#"]'));
+ const sections=Array.from(root.querySelectorAll('main .section'));
+ function show(id,changeHash){
+   const target=root.querySelector('main #'+CSS.escape(id));
+   if(!target)return;
+   sections.forEach(s=>s.classList.toggle('active',s===target));
+   links.forEach(a=>{
+     const active=a.getAttribute('href')==='#'+id;
+     a.classList.toggle('active',active);
+     if(active)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');
+   });
+   if(changeHash){history.replaceState(null,'','#'+id);root.querySelector('.layout').scrollIntoView({behavior:'smooth',block:'start'});}
+ }
+ links.forEach(a=>a.addEventListener('click',e=>{e.preventDefault();show(a.hash.slice(1),true)}));
+ const hash=decodeURIComponent(location.hash.slice(1));
+ const clase=hash && root.querySelector('#'+CSS.escape(hash)+'.clase-card');
+ if(clase){show('cronograma',false);clase.open=true;setTimeout(()=>clase.scrollIntoView({block:'start'}),50)}
+ else show(sections.some(s=>s.id===hash)?hash:'presentacion',false);
+ window.addEventListener('hashchange',()=>{
+   const id=decodeURIComponent(location.hash.slice(1));
+   const c=root.querySelector('#'+CSS.escape(id)+'.clase-card');
+   if(c){show('cronograma',false);c.open=true;c.scrollIntoView({block:'start'})}
+   else show(id,false)
+ });
+})();
+</script></body>
+</html>
