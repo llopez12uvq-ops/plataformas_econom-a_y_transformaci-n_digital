@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Clase 1 · Material de lectura · Economía digital y plataformas</title>
+<style>
+    body{
+      margin:0;
+      padding:24px;
+      background:#eef3f6;
+      font-family: Arial, Helvetica, sans-serif;
+      color:#2f3a45;
+    }
+    .wrap{
+      max-width:820px;
+      margin:0 auto;
+      background:#ffffff;
+      border:1px solid #d9e3ea;
+      border-radius:18px;
+      overflow:hidden;
+      box-shadow:0 6px 18px rgba(0,0,0,0.06);
+    }
+    .hero{
+      background: linear-gradient(135deg, #d9eef7 0%, #eef7fb 100%);
+      padding: 28px 32px 20px 32px;
+      border-bottom: 1px solid #dbe7ee;
+    }
+    .kicker{
+      font-size: 13px;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+      color: #5f7f8f;
+      margin-bottom: 10px;
+    }
+    h1{
+      margin:0;
+      font-size: 30px;
+      line-height: 1.2;
+      color: #1f4e6b;
+      font-weight: 700;
+    }
+    .sub{
+      margin: 10px 0 0 0;
+      font-size: 16px;
+      line-height: 1.6;
+      color: #4a6170;
+    }
+    .author{
+      margin: 8px 0 0 0;
+      font-size: 13px;
+      line-height: 1.5;
+      color: #6a7f8c;
+    }
+    .content{
+      padding: 30px 3cm 34px 3cm;
+      background: #ffffff;
+    }
+    h2{
+      margin: 0 0 14px 0;
+      font-size: 20px;
+      line-height:1.3;
+      color:#2d5d77;
+    }
+    p{
+      margin: 0 0 18px 0;
+      font-size: 17px;
+      line-height: 1.8;
+    }
+    .hl{
+      background: linear-gradient(180deg, transparent 35%, #fff3a6 35%, #fff3a6 100%);
+      padding:0 .12em;
+      border-radius:3px;
+      box-decoration-break: clone;
+      -webkit-box-decoration-break: clone;
+    }
+    .box{
+      margin: 24px 0;
+      padding: 18px 20px;
+      background: #f7fbfd;
+      border-left: 4px solid #7bb9d4;
+      border-radius: 10px;
+    }
+    .box.white{
+      background:#fcfdfe;
+      border:1px solid #e6eef2;
+      border-left: none;
+    }
+    .box-title{
+      font-size: 14px;
+      font-weight: 700;
+      color: #3f6d84;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-bottom: 8px;
+    }
+    .box p:last-child{margin-bottom:0;}
+    ul{
+      margin:0;
+      padding-left:22px;
+    }
+    li{
+      margin-bottom:10px;
+      font-size:16px;
+      line-height:1.8;
+    }
+    .small{
+      font-size:15px;
+      color:#516674;
+    }
+
+    .quote-balloon{
+      position:relative;
+      margin: 28px 0;
+      padding: 24px 24px 22px 24px;
+      background: linear-gradient(135deg, #eef7fb 0%, #f7fbfd 100%);
+      border: 1px solid #dbe7ee;
+      border-left: 6px solid #7bb9d4;
+      border-radius: 18px;
+      box-shadow: 0 8px 18px rgba(0,0,0,0.04);
+    }
+    .quote-balloon::before{
+      content: "“";
+      position:absolute;
+      top:-8px;
+      left:16px;
+      font-size:58px;
+      line-height:1;
+      color:#7bb9d4;
+      font-family: Georgia, "Times New Roman", serif;
+      opacity:.95;
+    }
+    .quote-balloon p{
+      margin:0;
+      padding-left:18px;
+      font-size:18px;
+      line-height:1.85;
+      color:#314550;
+    }
+
+    @media (max-width: 900px){
+      .content{
+        padding: 24px;
+      }
+    }
+  
+/* Adaptación responsiva del texto original */
+*{box-sizing:border-box}
+html{overflow-x:hidden}
+body{padding:18px 12px}
+.wrap{max-width:1000px;width:100%;min-width:0}
+.content{padding:30px clamp(18px,5vw,58px) 36px}
+.wrap p,.wrap li{overflow-wrap:break-word}
+@media(max-width:620px){body{padding:0}.wrap{border-radius:0;border:0;box-shadow:none}.hero{padding:25px 18px 21px}.content{padding:24px 18px}.hero h1{font-size:clamp(24px,6vw,30px)}.quote-balloon{padding:22px 17px}.quote-balloon p{padding-left:12px;font-size:16px}p{font-size:16px;line-height:1.7}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="hero">
+<div class="kicker">Clase 1 · Unidad I · Material de lectura</div>
+<h1>La pandemia solo aceleró la irrupción de la revolución digital</h1>
+<p class="sub">Economía digital y plataformas · Desarrollo escrito de la Clase 1</p>
+<p class="author">Sergio Paz y Linda Lopez, 2026</p>
+</div>
+<div class="content">
+<h2>Introducción</h2>
+<p>La revolución digital está transformando la forma en que producimos, nos educamos, consumimos y trabajamos. La adopción de tecnologías digitales avanzadas ha propiciado múltiples innovaciones que dieron lugar a la creación de nuevos modelos de negocios, la creación de nuevos bienes y servicios y el surgimiento de grandes empresas y plataformas digitales que dominan en la actualidad la escena económica mundial.</p>
+<p>Nuestras actividades en el mundo digital pasaron de un modelo inicial abierto, participativo y libre en Internet a uno dominado por grandes plataformas digitales. Al principio, las plataformas perseguían los mismos objetivos que el conjunto: democratizar el acceso a bienes y servicios, pero luego fueron optando solo por la intermediación económica y financiera.</p>
+<p>Actualmente las plataformas digitales tienen una preponderancia fundamental sobre nuestras vidas, ya que no solo regulan las formas en que interactuamos, sino que la reputación digital emanada condiciona muchas veces nuestras relaciones sociales. <span class="hl">No se trata de ser una celebridad del mundo digital, sino de sobrevivir en él.</span></p>
+<div class="box">
+<div class="box-title">Idea central</div>
+<p>La clase propone comprender que la revolución digital no constituye solo una serie de innovaciones técnicas, sino una transformación profunda de la economía, de las relaciones sociales y de las formas de mediación que organizan la vida contemporánea.</p>
+</div>
+<h2>Economía digital y plataformas</h2>
+<p>La revolución digital significa un cambio radical y relativamente rápido que se produjo como consecuencia de la irrupción de las tecnologías digitales en la economía actual (CEPAL, 2016). Sus tecnologías fueron impregnando cada actividad con una gran velocidad, pero atravesó por completo nuestras vidas con la llegada de la pandemia del Covid-19.</p>
+<p><span class="hl">La pandemia solo aceleró la irrupción de la revolución digital. Y ya no es el futuro, sino nuestro presente.</span> Los efectos de esta revolución habían ya alcanzado cada rincón del planeta antes de la pandemia. No obstante, incluso quienes dudaban o se mantenían al margen del mundo digital, de un día para el otro, se volvieron parte sin remedio.</p>
+<p>Por supuesto, existen quienes están muy entusiasmados por las transformaciones que generan las tecnologías digitales. Al punto que hay quienes la equiparan con la revolución neolítica: aquella que generó que el ser humano pasara de nómada a sedentario, y que su base económica y productiva pasara de la caza y la recolección a la agricultura y la cría de animales.</p>
+<p>Actualmente, todas las personas están conectadas a esta gran red humana a través de Internet. Este es el gran catalizador de la actual revolución digital, ya que se ha transformado en una herramienta tecnológica accesible para la gran mayoría de la población en el mundo. En poco más de dos décadas, se transformó en el amplificador fundamental de la revolución tecnológica más amplia y acelerada de la historia.</p>
+<div class="quote-balloon">
+<p>La actual revolución digital cumple el vaticinio de los y las analistas de la economía del cambio tecnológico que advirtieron, hace varias décadas, que el lapso de adopción de cada tecnología que irrumpe se va acortando conforme transitamos las revoluciones tecnológicas.</p>
+</div>
+<div class="box white">
+<div class="box-title">Claves para leer este proceso</div>
+<ul>
+<li>La velocidad de adopción tecnológica es cada vez mayor.</li>
+<li>Internet funciona como catalizador de la revolución digital.</li>
+<li>Los datos y la información se vuelven recursos estratégicos.</li>
+<li>La pandemia masificó prácticas que ya estaban en marcha.</li>
+</ul>
+</div>
+<p>El ritmo es realmente vertiginoso en la economía digital. Aún no terminamos de comprender totalmente el funcionamiento de la conectividad móvil y la computación en la nube, mientras el centro de atención de la innovación ya migró a la incorporación de lo digital en bienes y servicios no digitales, haciendo importante lo que pasa con Internet de las cosas, la inteligencia artificial, la robótica y la tecnología blockchain (CEPAL, 2018).</p>
+<p>Estamos evolucionando en un mundo digitalizado, en donde existe una convivencia entre la economía tradicional y modelos de producción, consumo y gobernanza que surgen del nuevo paradigma tecnológico, lo cual conlleva una serie de impactos, tanto positivos como negativos. La conformación de un nuevo sistema digitalmente entrelazado, en el que coexisten e interactúan ambos mundos, da lugar a un ecosistema complejo que requiere un proceso de adecuación organizativa, institucional y normativa, y en el que la información y los datos adquieren un rol estratégico como fuente de creación de valor (CEPAL, 2018, 2022).</p>
+<div class="quote-balloon">
+<p>Las anteriores revoluciones estaban sustentadas en innovaciones tecnológicas como la máquina de vapor, la electricidad y el petróleo, el ferrocarril y el automóvil; pero la de nuestro presente se encuentra motorizada por Internet y las tecnologías digitales, y por un elemento intangible: <span class="hl">los datos y la información.</span></p>
+</div>
+<p>De un día para el otro, todas las personas, sin importar la edad, usamos el comercio electrónico, las redes sociales y la banca online. Incluso trabajamos de forma remota vía Internet y con nuestros ordenadores, y nos comunicamos con clientes y proveedores mediados por plataformas digitales.</p>
+<p>Un punto importante es que buena parte de nuestras creencias acerca de la actual revolución digital está cambiando. Sin dudas, estamos pasando de un modelo abierto y altruista que tiene su origen en la utopía de la World Wide Web de Tim Berners-Lee, a uno dominado por las grandes plataformas digitales.</p>
+<div class="quote-balloon">
+<p>El mundo de la economía y los negocios digitales cada día se desarrolla más dentro de los límites de las plataformas. Esto transformó la producción, el consumo y la distribución de bienes y servicios a nivel global, lo cual reforzó la concentración económica para dejarla en manos de unas pocas grandes empresas digitales.</p>
+</div>
+<p><span class="hl">El fuerte avance de las plataformas digitales produjo una fuerza concentradora que hoy controla la economía y las interacciones sociales.</span></p>
+<p>Asimismo, también aparece una nueva percepción de la empresa. Es que las empresas de la economía digital cambian el foco tradicional de la gestión. Hacen que estemos preocupados por los medios de distribución, además de los de producción, y exigen una mayor atención en la gestión integral de sus activos intelectuales —patentes, conocimientos, secretos comerciales— que en la de sus activos físicos.</p>
+<p>Las plataformas de la economía digital tienen buena prensa al citarse que ofrecen las virtudes de coordinar las actividades, reducir los costos de búsqueda, agilizar los procesos organizativos y comprimir los costos de transacción. Quizás estas sean las razones por las que la expansión de la actual revolución digital sobre el mercado se realiza por la vía de las plataformas digitales.</p>
+<p>En particular, las plataformas de comercio electrónico están transformando el mundo de los intercambios de bienes y servicios, al reducir los costos de búsqueda, converger los patrones de producción y consumo y sistematizar los precios a escala mundial.</p>
+<p>Las plataformas modificaron la forma de intercambiar y también la de definir quiénes pueden hacerlo. Ahora las calificaciones de las cuentas constituyen la guía para saber quién está del otro lado de la pantalla. Tanto oferentes como demandantes, en una transacción comercial, resuelven por medio de estas calificaciones el problema de la confianza entre agentes con anonimato y, por otro lado, la reputación conseguida se transforma en un tipo de capital que produce cada participante en cada comunidad.</p>
+<div class="box">
+<div class="box-title">Destacado</div>
+<p><span class="hl">La reputación digital es el elemento indispensable y decisivo en las plataformas digitales</span>, ya sean comerciales, financieras, educativas o incluso motor de nuestras relaciones sociales.</p>
+</div>
+<p>Internet creció porque se observó que podían extraerse beneficios de ella. Las personas encontraron que era un muy buen lugar para producir en compañía, pero también para compartir las cosas que les gustaban. Las plataformas para compartir archivos a través de Internet fueron un gran combustible para su desarrollo.</p>
+<p>En el centro del proceso se encuentran las plataformas digitales. Actualmente, la economía se define por la convergencia de un conjunto de tecnologías emergentes que configuran dinámicas explosivas y disruptivas, las cuales imprimen una velocidad inusitada de cambio, producto de la naturaleza exponencial de los avances tecnológicos.</p>
+<p>Ahora el centro de atención está en el comercio electrónico y los pagos digitales, el bitcóin y las criptomonedas, la tecnología blockchain, la banca online y las empresas fintech, y la transformación digital de las empresas.</p>
+<h2>Plataformas por aquí y por allá</h2>
+<p>El impacto de la actual revolución digital en nuestras vidas es, en buena parte, responsabilidad de las plataformas digitales que nos intermedian. Su principal contribución consiste en facilitar los intercambios y las interacciones entre agentes y comunidades de usuarios.</p>
+<p>Desde una perspectiva económica, las plataformas digitales son intermediarias entre oferentes y demandantes de bienes, servicios, ideas o inversiones. Del mismo modo que sucedería en un mercado, reúnen a compradores y vendedores de productos, transporte, alojamiento, programas educativos y culturales y otros sectores económicos.</p>
+<div class="quote-balloon">
+<p>Una característica natural de las plataformas estudiada por sus especialistas es que cuanto más grande es la red resultante, mayor beneficio es experimentado por la comunidad. <span class="hl">Esto se conoce como economías de red.</span></p>
+</div>
+<p>En el ámbito de la economía hay plataformas asociadas a la compra y venta de bienes y servicios profesionales, como Mercado Libre; plataformas vinculadas a la provisión de servicios profesionales de forma virtual, como Freelancer; plataformas de servicios poco calificados que implican desplazamiento físico, como Glovo o Uber; plataformas de servicios vinculadas a las refacciones en el hogar o al cuidado, como Cuideo; y plataformas que conectan a oferentes y demandantes de alojamiento, como Airbnb.</p>
+<div class="quote-balloon">
+<p>Srnicek (2018) señala que lo que define nuestra época es la centralidad de los datos; es por ello que, al igual que con el petróleo, son una materia prima que debe ser extraída, refinada y procesada para que sea útil. Cuando el modelo de negocio tradicional de producir un bien y venderlo fue quedando obsoleto para registrar datos, la respuesta que emergió fue la plataforma, es decir, una infraestructura digital que permite que interactúen dos o más grupos.</p>
+</div>
+<div class="box white">
+<div class="box-title">Características fundamentales de las plataformas</div>
+<ul>
+<li><strong>Intermediación:</strong> se posicionan como el terreno donde ocurren las interacciones, lo que les da un acceso privilegiado a los datos.</li>
+<li><strong>Efectos de red:</strong> cuantos más usuarios tiene una plataforma, más valiosa se vuelve para el resto, lo que genera una tendencia natural hacia el monopolio.</li>
+<li><strong>Subvenciones cruzadas:</strong> utilizan un aspecto del negocio, a veces ofreciendo servicios gratuitos para atraer usuarios y generar ganancias por otra vía.</li>
+<li><strong>Arquitectura cerrada:</strong> la plataforma establece sus propias reglas del juego y termina moldeando al mercado.</li>
+</ul>
+</div>
+<p>Si miramos el vasto mundo de las plataformas digitales, veremos dos tipos bien distinguibles. Un tipo lo conforman aquellas que se basan en la intermediación entre la oferta y la demanda, habitualmente entre una empresa constituida o una profesional y una consumidora, y manifiestan por lo general ánimo de lucro. Por otro lado, están las plataformas digitales de la economía colaborativa, que apuntan a la intermediación entre la oferta y la demanda, pero entre iguales. En general, no tienen fin de lucro, sino que su objetivo fundamental es compartir y aprovechar productos y recursos infrautilizados, pudiendo existir o no un pago.</p>
+<div class="quote-balloon">
+<p>Las plataformas digitales pueden ofrecer un medio de relativa facilidad para la intermediación a bajo costo entre personas con necesidades concretas y otras que pueden cumplirlas, ya se trate de bienes o servicios.</p>
+</div>
+<p>Las empresas de la economía digital realizan sus negocios, por ejemplo, vendiendo sus productos y servicios a través de estas plataformas; luego otras empresas aportarán el resto de las actividades que necesitan, como la gestión del inventario, el sistema de comercialización, la atracción de nuevos proveedores, los requerimientos de firmas logísticas, los procesos de financiación, la contratación de seguros, etc.</p>
+<p>Pero hay un elemento que necesitamos señalar ya que, por otro lado, permiten también intercambios de baja performance, susceptibles de ser esporádicos. Esto se conoce como <span class="hl">gig-economy</span>. Se asocia a trabajos esporádicos, por encargo y de corta duración, en los que el contratado se encarga de una tarea específica dentro de un proyecto más grande.</p>
+<div class="quote-balloon">
+<p>Actualmente la gig-economy es un tipo de economía que crece rápidamente al contar con plataformas digitales de uso extendido, donde el trabajo es contratado directamente por quien lo demanda. Este formato de negocios se ha incrementado, pero encendió la preocupación por la generación de oportunidades de empleo de baja calificación, escaso profesionalismo y reducida escalabilidad.</p>
+</div>
+<h2>Tipos de plataformas</h2>
+<p>Srnicek (2018) clasifica el cuadro que emerge de la economía digital actual en cinco tipos de plataformas, aunque señala que una sola empresa —como Amazon— puede abarcar varias categorías.</p>
+<div class="box">
+<div class="box-title">Plataformas publicitarias</div>
+<p>Estas plataformas son las pioneras y surgieron de la necesidad de las empresas de la era Puntocom de generar ingresos tras la caída del capital de riesgo pasado el furor bursátil de fines del Siglo XX. Su modelo consiste en extraer datos e información de las actividades de los usuarios para vender luego el espacio publicitario. En este sentido, es importante señalar, con nuestro autor, que la plataforma simplemente se apropia de los datos como materia prima generada por la interacción social de los participantes para luego obtener un lucro con ellos.</p>
+</div>
+<div class="box white">
+<div class="box-title">Plataformas de la nube</div>
+<p>El presente modelo de plataformas la consolida como un espacio de alquiler de infraestructura tecnológica, donde Amazon Web Services (AWS) es el ejemplo paradigmático. Esta surgió de una necesidad de organización empresarial interna de Amazon y la compañía terminó alquilando la potencia de cálculo y almacenamiento desarrollado a otras empresas. Es cierto también que este servicio otorga a los dueños de la nube un poder inmenso sobre toda la economía digital.</p>
+</div>
+<div class="box">
+<div class="box-title">Plataformas industriales</div>
+<p>Estas plataformas se centran en la Industria 4.0, que pospugna por integran sensores y robots en el proceso de producción y logística para optimizar cada paso y reducir la estructura de costos. El objetivo es crear fábricas inteligentes donde cada componente se comunique entre sí y sin intermediación humana. El riesgo, señalado por nuestro autor, es que se termine por construir el sistema operativo monopólico que gestione la infraestructura industrial global.</p>
+</div>
+<div class="box white">
+<div class="box-title">Plataformas de productos</div>
+<p>Estas plataformas transforman bienes tradicionales (por ejemplo, música o películas) en servicios por los que se cobra una suscripción o alquiler. En algunos casos, esto permite a las empresas recuperar márgenes de ganancia mediante el control de los datos del rendimiento del producto que alquilan y son utilizados por terceros.</p>
+</div>
+<div class="box">
+<div class="box-title">Plataformas austeras</div>
+<p>Las denominadas plataformas austeras por Srnicek, son las más frágiles del ecosistema digital y son "austeras" porque intentan desvincularse de la propiedad de los activos fijos que mueven al negocio (por ejemplo, Uber no posee autos). Su modelo se basa en una hipertercerización de la economía, donde los costos de inversión y mantenimiento del equipo, junto a la capacitación laboral, son asumidos íntegramente por sus contratistas independientes. Nuestro autor señala que estas plataformas se vinculan con tendencias de largo plazo vinculadas a la precarización laboral y que dependen críticamente del capital de riesgo inyectado para que sobrevivan ya que la mayoría no son rentables.</p>
+</div>
+<p>El ascenso de las plataformas digitales, según Srnicek (2018), presenta desafíos significativos: tendencias monopólicas de mercado, fragmentación del mundo digital, precariedad laboral, dudas sobre la viabilidad real de muchas plataformas, alta concentración económica y extracción de rentas no tecnológicas.</p>
+<p>La respuesta a estos desafíos no es sencilla: una posibilidad sería la creación de plataformas públicas o cooperativas que sean de propiedad estatal o de la sociedad civil y que estén orientadas al servicio público en lugar del lucro.</p>
+<h2>Conclusiones</h2>
+<p>La posibilidad de realizar negocios digitales con un solo clic y desde cualquier lugar del planeta a través de las herramientas actuales de la economía digital habilita muchas posibilidades.</p>
+<p><span class="hl">La pandemia aceleró la utilización del ecommerce</span>, incluso en el público que antes no se animaba o no deseaba comprar online. Después de esta pandemia, nada será igual y el comercio electrónico seguramente seguirá creciendo.</p>
+<p>Un resultado evidente ha sido el aumento de la gig-economy, lo cual encendió la preocupación por la generación de empleo de baja calificación, el escaso profesionalismo y la reducida escalabilidad de los negocios.</p>
+<p>Las plataformas se presentan como facilitadoras cruciales de la concentración económica en manos de quienes controlan la infraestructura crítica de la sociedad digital. Como advierte Srnicek, se vuelven el centro de cualquier análisis sobre el futuro de la economía global.</p>
+<div class="box white">
+<div class="box-title">Bibliografía</div>
+<p>Srnicek, N. (2018). <em>Capitalismo de plataformas</em>. Buenos Aires: Caja Negra.</p>
+<p class="small">Bibliografía complementaria: </p>
+<p>CEPAL (2016) <em>La nueva revolución digital. De la Internet del consumo a la Internet de la producción.</em> Santiago: CEPAL.
+        <p>CEPAL (2018)<em>Datos, algoritmos y políticas. La redefinición del mundo digital. </em>Santiago: CEPAL.</p>
+<p>CEPAL (2022)Un camino digital para el desarrollo sostenible de América Latina y el Caribe, Santiago: CEPAL.</p>
+</p></div>
+</div>
+</div>
+</body>
+</html>
