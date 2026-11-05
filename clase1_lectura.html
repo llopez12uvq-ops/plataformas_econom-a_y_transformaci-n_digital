@@ -38,6 +38,63 @@
  .content{padding:30px clamp(18px,5vw,36px) 54px}
 }
 @media(prefers-reduced-motion:reduce){.sidebar{transition:none}}
+
+/* Edición editorial: continuidad visual con la Clase 1 */
+:root {--paper:#fff;--soft:#f5f9fa;--round:20px}
+body{background:linear-gradient(180deg,#edf4f6,#f7fafb);}
+.page{border-radius:24px;box-shadow:0 20px 60px rgba(10,47,66,.11);border:1px solid #d9e5eb;isolation:isolate;}
+.hero{position:relative;isolation:isolate;overflow:hidden;border-radius:23px 23px 0 0;
+  background:linear-gradient(100deg,rgba(6,36,54,.96) 0%,rgba(9,49,68,.91) 61%,rgba(13,74,91,.66) 100%),
+  url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+  padding:66px clamp(24px,6vw,78px) 59px;
+  border-bottom:0;
+}
+.hero::after{content:'';position:absolute;inset:auto 0 0;height:5px;background:linear-gradient(90deg,#13a16c 0 32%,#13a4d2 32% 100%);}
+.hero .kicker{color:#a8e9d5;letter-spacing:.14em;}
+.hero h1{font-size:clamp(32px,4.2vw,54px);max-width:900px;line-height:1.11;font-weight:800;text-wrap:balance;text-shadow:0 2px 12px rgba(0,0,0,.14)}
+.hero .sub{max-width:800px;font-size:17px;line-height:1.5;color:#e7f5f9}
+.hero .author{margin-top:17px;font-size:13px;color:#cee7ed}
+.stage{background:#fff;grid-template-columns:252px minmax(0,1fr);border-radius:0 0 23px 23px;}
+.sidebar{background:linear-gradient(180deg,#f5fafb 0%,#f8fafb 100%);padding-top:37px;border-right:1px solid #deeaed;border-radius:0 0 0 23px;}
+.menu-head{margin-bottom:17px;padding-bottom:18px}
+.menu-head strong{color:#2d6375}
+.nav-link{border:1px solid transparent;transition:background .18s,color .18s,border-color .18s}
+.nav-link:hover{border-color:#d9e9ee}
+.nav-link.active{border-color:#bfe4e9;background:#e9f7f8;box-shadow:inset 3px 0 #0d967e}
+.nav-no{color:#138965}
+.content{width:min(100%,940px);margin:0 auto;padding:55px clamp(24px,5.4vw,68px) 80px;}
+.content h2{font-size:clamp(27px,2.9vw,34px);margin:75px 0 27px;padding:0 0 16px;border-bottom:1px solid #e1eaee;line-height:1.17;position:relative;}
+.content h2:first-child{margin-top:0}
+.content h2::before{display:block;color:#11896b;font-weight:800;font-family:Arial,sans-serif;font-size:11px;letter-spacing:.15em;margin-bottom:11px}
+#introduccion::before{content:'01  /  APERTURA'}
+#economia-digital::before{content:'02  /  DESARROLLO'}
+#plataformas::before{content:'03  /  ANÁLISIS'}
+#tipos::before{content:'04  /  CLASIFICACIÓN'}
+#conclusiones::before{content:'05  /  CIERRE'}
+.content h2::after{content:'';position:absolute;left:0;bottom:-1px;width:52px;height:3px;border-radius:8px;background:#0d9ebf}
+.content p{font-size:17px;line-height:1.83;color:#344a58;margin-bottom:22px;}
+.content > p:first-of-type{font-size:18px;color:#274658}
+.box,.quote-balloon{border-radius:16px;padding:23px 26px;background:#f5f9fb;border-left:4px solid #0c99be;box-shadow:none;margin:30px 0}
+.quote-balloon{background:#eff8fa;border-color:#15a3b7}
+.quote-balloon p{font-size:17px;line-height:1.8}
+.box.white{background:#fff;border:1px solid #dbe8eb;border-left:4px solid #15977b}
+.box-title{color:#136e7b;font-size:12px;letter-spacing:.09em}
+.hl{background:linear-gradient(transparent 61%,#fef1b7 61%)}
+#bibliografia{background:#f8fbfc;border:1px solid #dce9ed;border-left:4px solid #15977b;border-radius:16px;padding:27px!important;margin-top:70px!important}
+.footer{border-radius:0 0 23px 23px;background:#f9fbfc}
+@media(max-width:800px){
+ .page{border-radius:16px}.hero{border-radius:15px 15px 0 0;padding:49px 28px 43px}
+ .stage{display:block}.content{padding:39px 26px 60px}.sidebar{border-radius:0}
+ .content h2{margin-top:54px}.bar{border-bottom:1px solid #d9e9ee}
+}
+@media(max-width:520px){
+ .page{border:0;border-radius:0}.hero{border-radius:0;padding:39px 20px 35px}
+ .hero h1{font-size:clamp(29px,8vw,40px)}.hero .sub{font-size:15px}
+ .content{padding:33px 19px 56px}.content p{font-size:16px;line-height:1.77}
+ .content h2{font-size:26px;margin-top:49px}.box,.quote-balloon{padding:18px 17px}
+ .footer{border-radius:0}
+}
+
 </style></head>
 <body><div class="page">
 <header class="hero"><div class="kicker">Clase 1 · Unidad I · Material de lectura</div><h1>La pandemia solo aceleró la irrupción de la revolución digital</h1><p class="sub">Economía digital y plataformas · Desarrollo escrito de la Clase 1</p><p class="author">Sergio Paz y Linda López · 2026</p></header>
@@ -151,10 +208,10 @@
 <div class="box-title">Bibliografía</div>
 <p>Srnicek, N. (2018). <em>Capitalismo de plataformas</em>. Buenos Aires: Caja Negra.</p>
 <p class="small">Bibliografía complementaria: </p>
-<p>CEPAL (2016) <em>La nueva revolución digital. De la Internet del consumo a la Internet de la producción.</em> Santiago: CEPAL.
-        <p>CEPAL (2018)<em>Datos, algoritmos y políticas. La redefinición del mundo digital. </em>Santiago: CEPAL.</p>
+<p>CEPAL (2016) <em>La nueva revolución digital. De la Internet del consumo a la Internet de la producción.</em> Santiago: CEPAL.</p>
+<p>CEPAL (2018)<em>Datos, algoritmos y políticas. La redefinición del mundo digital. </em>Santiago: CEPAL.</p>
 <p>CEPAL (2022)Un camino digital para el desarrollo sostenible de América Latina y el Caribe, Santiago: CEPAL.</p>
-</p></div>
+</div>
 </main></div>
 <footer class="footer">Plataformas, economía y transformación digital · Universidad Nacional de Quilmes</footer></div>
 <script>
